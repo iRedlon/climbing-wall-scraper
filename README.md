@@ -14,8 +14,6 @@ npm start
 
 Your app should now be running on [localhost:5000](http://localhost:5000/)
 
-ur mom fat
-
 ## Deploying to Heroku
 
 ```

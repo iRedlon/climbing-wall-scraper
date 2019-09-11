@@ -1,6 +1,7 @@
 
 // imports
 const express = require("express");
+const scraper = require("./scraper.js")
 
 
 // constants
@@ -22,4 +23,3 @@ app.get("/", function(req, res) {
 app.listen(port);
 
 
-Cheese

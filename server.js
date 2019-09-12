@@ -1,7 +1,7 @@
 
 // imports
 const express = require("express");
-const scraper = require("./scraper.js");
+const scrape = require("./scraper.js").scrape;
 
 
 // constants
@@ -15,5 +15,8 @@ app.get("/", function(req, res) {
 
 
 app.listen(port);
+
+
+setInterval(scrape, 1000 * 60 * 5);
 
 

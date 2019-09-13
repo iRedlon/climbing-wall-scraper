@@ -2,6 +2,7 @@
 // imports
 const express = require("express");
 const scrape = require("./scraper.js").scrape;
+const startkeepalive = require("./pinger.js").startKeepAlive()
 
 
 // constants
@@ -16,7 +17,8 @@ app.get("/", function(req, res) {
 
 app.listen(port);
 
-
+startkeepalive
 setInterval(scrape, 1000 * 60 * 5);
+
 
 

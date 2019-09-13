@@ -2,7 +2,7 @@
 // imports
 const express = require("express");
 const scrape = require("./scraper.js").scrape;
-const startkeepalive = require("./pinger.js").startKeepAlive()
+const startkeepalive = require("./pinger.js").startKeepAlive;
 
 
 // constants

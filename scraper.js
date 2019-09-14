@@ -39,7 +39,7 @@ function handleRes(res) {
         login({email: fb_email, password: fb_password}, (err, api) => {
             if (err) return console.error(err);
 
-            let message = `I am open. ${name} is here from ${time}`;
+            let message = `I'm open! ${name} is here from ${time}`;
             api.sendMessage(message, "100000230284341");
             current_text = table_text;
         });

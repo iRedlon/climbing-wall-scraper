@@ -1,30 +1,31 @@
 
-
 // imports
-var http = require('http'); //importing http
+const http = require("http");
 
-function startKeepAlive() {
+
+function keepAlive() {
     setInterval(function() {
-        var options = {
-            host: 'evening-lowlands-46615.herokuapp.com',
+        let options = {
+            host: "evening-lowlands-46615.herokuapp.com",
             port: 80,
-            path: '/'
+            path: "/"
         };
+
         http.get(options, function(res) {
-            res.on('data', function(chunk) {
+            res.on("data", function(chunk) {
                 try {
-                    // optional logging... disable after it's working
                     console.log("HEROKU RESPONSE: " + chunk);
                 } catch (err) {
                     console.log(err.message);
                 }
             });
-        }).on('error', function(err) {
+        }).on("error", function(err) {
             console.log("Error: " + err.message);
         });
-    }, 20 * 60 * 1000); // load every 20 minutes
+    }, 1000 * 60 * 20);
 }
 
+
 module.exports = {
-    startKeepAlive: startKeepAlive
+    keepAlive: keepAlive
 };
